@@ -1,0 +1,3 @@
+[submodule "zmk-studio-messages"]
+	path = zmk-studio-messages
+	url = https://github.com/zmkfirmware/zmk-studio-messages.git

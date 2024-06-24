@@ -1,0 +1,136 @@
+{
+  "name": "zmk-studio-ts-client",
+  "version": "0.0.1-development",
+  "description": "RPC client library for interacting with ZMK Studio enabled keyboards",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./lib/index.d.ts",
+      "import": "./lib/index.js"
+    },
+    "./*": {
+      "types": "./lib/*.d.ts",
+      "import": "./lib/*.js"
+    }
+  },
+  "files": [
+    "lib/**/*"
+  ],
+  "scripts": {
+    "generate": "protoc --plugin=./node_modules/.bin/protoc-gen-ts_proto --ts_proto_out=./src/ --proto_path=./zmk-studio-messages/proto/zmk/ ./zmk-studio-messages/proto/zmk/*.proto",
+    "preinstall": "if [ -e src/ ]; then git submodules update --init; fi",
+    "postinstall": "npm run generate",
+    "build": "tsc --project tsconfig.build.json",
+    "clean": "rm -rf ./lib/",
+    "cm": "cz",
+    "lint": "eslint ./src/ --fix",
+    "semantic-release": "semantic-release",
+    "test:watch": "jest --watch",
+    "test": "jest --coverage",
+    "typecheck": "tsc --noEmit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zmkfirmware/zmk-studio-ts-client.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "ZMK Project",
+    "email": "petejohason@users.noreply.github.com",
+    "url": "https://github.com/zmkfirmware"
+  },
+  "engines": {
+    "node": ">=12.0"
+  },
+  "keywords": [
+    "typescript",
+    "rpc",
+    "protobuf",
+    "mechanical-keyboards"
+  ],
+  "bugs": {
+    "url": "https://github.com/zmkfirmware/zmk-studio-ts-client/issues"
+  },
+  "homepage": "https://github.com/zmkfirmware/zmk#readme",
+  "dependencies": {
+    "async-mutex": "^0.5.0"
+  },
+  "devDependencies": {
+    "@ryansonshine/commitizen": "^4.2.8",
+    "@ryansonshine/cz-conventional-changelog": "^3.3.4",
+    "@types/jest": "^29.0.0",
+    "@types/node": "^12.20.11",
+    "@types/web-bluetooth": "^0.0.20",
+    "@types/w3c-web-serial": "^1.0.6",
+    "@typescript-eslint/eslint-plugin": "^4.22.0",
+    "@typescript-eslint/parser": "^4.22.0",
+    "conventional-changelog-conventionalcommits": "^5.0.0",
+    "eslint": "^7.25.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "husky": "^6.0.0",
+    "jest": "^29.0.0",
+    "lint-staged": "^13.2.1",
+    "prettier": "^2.2.1",
+    "semantic-release": "^21.0.1",
+    "ts-jest": "^29.0.0",
+    "ts-node": "^10.2.1",
+    "typescript": "^4.2.4",
+    "ts-proto": "^1.174.0",
+    "web-streams-polyfill": "4.0.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/@ryansonshine/cz-conventional-changelog"
+    }
+  },
+  "lint-staged": {
+    "*.ts": "eslint --cache --cache-location .eslintcache --fix"
+  },
+  "release": {
+    "branches": [
+      "main"
+    ],
+    "plugins": [
+      [
+        "@semantic-release/commit-analyzer",
+        {
+          "preset": "conventionalcommits",
+          "releaseRules": [
+            {
+              "type": "build",
+              "scope": "deps",
+              "release": "patch"
+            }
+          ]
+        }
+      ],
+      [
+        "@semantic-release/release-notes-generator",
+        {
+          "preset": "conventionalcommits",
+          "presetConfig": {
+            "types": [
+              {
+                "type": "feat",
+                "section": "Features"
+              },
+              {
+                "type": "fix",
+                "section": "Bug Fixes"
+              },
+              {
+                "type": "build",
+                "section": "Dependencies and Other Build Updates",
+                "hidden": false
+              }
+            ]
+          }
+        }
+      ],
+      "@semantic-release/npm",
+      "@semantic-release/github"
+    ]
+  }
+}
