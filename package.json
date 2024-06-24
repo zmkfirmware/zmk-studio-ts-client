@@ -18,8 +18,7 @@
   ],
   "scripts": {
     "generate": "protoc --plugin=./node_modules/.bin/protoc-gen-ts_proto --ts_proto_out=./src/ --proto_path=./zmk-studio-messages/proto/zmk/ ./zmk-studio-messages/proto/zmk/*.proto",
-    "preinstall": "if [ -e src/ ]; then echo 'UPDATE'; git submodule update --init; ls .; fi",
-    "postinstall": "npm run generate",
+    "postinstall": "if [ -e src/ ]; then echo 'UPDATE'; git submodule update --init; ls .; fi; npm run generate",
     "build": "tsc --project tsconfig.build.json",
     "clean": "rm -rf ./lib/",
     "cm": "cz",
