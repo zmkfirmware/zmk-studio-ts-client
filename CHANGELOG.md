@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.2](https://github.com/zmkfirmware/zmk-studio-ts-client/compare/v0.0.1...v0.0.2) (2024-06-29)
+
+
+### Miscellaneous Chores
+
+* Try to release 0.0.2 ([ce7403f](https://github.com/zmkfirmware/zmk-studio-ts-client/commit/ce7403fb71bb67d7c854b45a3805abe4f10350bf))
+
 ## 0.0.1 (2024-06-29)
 
 
