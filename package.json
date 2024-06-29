@@ -1,6 +1,6 @@
 {
   "name": "@zmkfirmware/zmk-studio-ts-client",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "RPC client library for interacting with ZMK Studio enabled keyboards",
   "type": "module",
   "exports": {

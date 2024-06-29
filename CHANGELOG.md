@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.7](https://github.com/zmkfirmware/zmk-studio-ts-client/compare/v0.0.6...v0.0.7) (2024-06-29)
+
+
+### Bug Fixes
+
+* Add protobufjs dependency. ([c609191](https://github.com/zmkfirmware/zmk-studio-ts-client/commit/c6091919ce5ae74372d55872b6ae8bd364a10592))
+
 ## [0.0.6](https://github.com/zmkfirmware/zmk-studio-ts-client/compare/v0.0.5...v0.0.6) (2024-06-29)
 
 
