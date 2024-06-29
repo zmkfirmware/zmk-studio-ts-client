@@ -28,6 +28,8 @@ jobs:
           node-version: 12
           registry-url: 'https://registry.npmjs.org'
         if: ${{ steps.release.outputs.release_created }}
+      - name: Install Protoc
+        uses: arduino/setup-protoc@v3
       - run: npm ci
         if: ${{ steps.release.outputs.release_created }}
       - run: npm publish --access public
