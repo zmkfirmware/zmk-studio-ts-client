@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.4](https://github.com/zmkfirmware/zmk-studio-ts-client/compare/v0.0.3...v0.0.4) (2024-06-29)
+
+
+### Bug Fixes
+
+* Add package-lock.json for release automation. ([0e76aad](https://github.com/zmkfirmware/zmk-studio-ts-client/commit/0e76aad525f20afe0e291e3746baf86e2561aa97))
+
 ## [0.0.3](https://github.com/zmkfirmware/zmk-studio-ts-client/compare/v0.0.2...v0.0.3) (2024-06-29)
 
 
