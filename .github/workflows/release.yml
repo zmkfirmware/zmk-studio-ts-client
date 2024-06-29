@@ -15,6 +15,7 @@ jobs:
       pull-requests: write
     steps:
       - uses: googleapis/release-please-action@v4
+        id: release
         with:
           token: ${{ secrets.ZMK_STUDIO_RELEASE_TOKEN }}
           release-type: node
