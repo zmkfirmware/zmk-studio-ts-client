@@ -30,6 +30,7 @@ jobs:
         if: ${{ steps.release.outputs.release_created }}
       - name: Install Protoc
         uses: arduino/setup-protoc@v3
+        if: ${{ steps.release.outputs.release_created }}
       - run: npm ci
         if: ${{ steps.release.outputs.release_created }}
       - run: npm publish --access public
