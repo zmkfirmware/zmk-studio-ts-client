@@ -7,6 +7,11 @@
 
 * Add protobufjs dependency. ([c609191](https://github.com/zmkfirmware/zmk-studio-ts-client/commit/c6091919ce5ae74372d55872b6ae8bd364a10592))
 
+
+### Miscellaneous Chores
+
+* Prepare 0.0.7 release ([cdbb186](https://github.com/zmkfirmware/zmk-studio-ts-client/commit/cdbb1868042a59ba16ee20014830ce408d189c64))
+
 ## [0.0.6](https://github.com/zmkfirmware/zmk-studio-ts-client/compare/v0.0.5...v0.0.6) (2024-06-29)
 
 
