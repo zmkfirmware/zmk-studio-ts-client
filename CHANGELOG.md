@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.8](https://github.com/zmkfirmware/zmk-studio-ts-client/compare/v0.0.7...v0.0.8) (2024-07-05)
+
+
+### Miscellaneous Chores
+
+* Prepare 0.0.8 release ([3a4f8f7](https://github.com/zmkfirmware/zmk-studio-ts-client/commit/3a4f8f70c0c25af3133f25e592fc50b9960ffe60))
+
 ## [0.0.7](https://github.com/zmkfirmware/zmk-studio-ts-client/compare/v0.0.6...v0.0.7) (2024-06-29)
 
 
