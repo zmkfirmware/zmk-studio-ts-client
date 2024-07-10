@@ -4,6 +4,7 @@ import { get_encoder, get_decoder } from './framing';
 import { RpcTransport } from './transport';
 
 import { Mutex } from 'async-mutex';
+import { ErrorConditions } from './meta';
 export { Request, RequestResponse, Response, Notification };
 
 export interface RpcConnection {
@@ -70,6 +71,23 @@ export function create_rpc_connection(transport: RpcTransport): RpcConnection {
 
 const rpcMutex = new Mutex();
 
+export class NoResponseError extends Error {
+  constructor() {
+    super("No RPC response received");
+    Object.setPrototypeOf(this, NoResponseError.prototype);
+  }
+}
+
+export class MetaError extends Error {
+  readonly condition: ErrorConditions;
+
+  constructor(condition: ErrorConditions) {
+    super("Meta error: " + condition);
+    this.condition = condition;
+    Object.setPrototypeOf(this, MetaError.prototype);
+  }
+}
+
 export async function call_rpc(
   conn: RpcConnection,
   req: Omit<Request, 'requestId'>
@@ -92,6 +110,12 @@ export async function call_rpc(
 
     if (value.requestId != request.requestId) {
       throw 'Mismatch request IDs';
+    }
+
+    if (value.meta?.noResponse) {
+      throw new NoResponseError();
+    } else if (value.meta?.simpleError) {
+      throw new MetaError(value.meta.simpleError);
     }
 
     return value;
