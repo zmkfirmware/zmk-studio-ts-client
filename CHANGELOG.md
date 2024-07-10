@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.0.9](https://github.com/zmkfirmware/zmk-studio-ts-client/compare/v0.0.8...v0.0.9) (2024-07-10)
+
+
+### Features
+
+* Raise errors for generic RPC error responses. ([524b305](https://github.com/zmkfirmware/zmk-studio-ts-client/commit/524b305cf82b4dba720f11b3d58af7f03b913051))
+
+
+### Miscellaneous Chores
+
+* Prep 0.0.9 release ([c4e0f7d](https://github.com/zmkfirmware/zmk-studio-ts-client/commit/c4e0f7d1e9daf4e82805c3df0c3ad41a932f3341))
+
 ## [0.0.8](https://github.com/zmkfirmware/zmk-studio-ts-client/compare/v0.0.7...v0.0.8) (2024-07-05)
 
 
