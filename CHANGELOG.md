@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.0.10](https://github.com/zmkfirmware/zmk-studio-ts-client/compare/v0.0.9...v0.0.10) (2024-07-12)
+
+
+### Features
+
+* Pull in layer related messages. ([ac886e9](https://github.com/zmkfirmware/zmk-studio-ts-client/commit/ac886e9beaf37a80512ad96850c1a05648b54635))
+
+
+### Miscellaneous Chores
+
+* Prep 0.0.10 release ([113e0ef](https://github.com/zmkfirmware/zmk-studio-ts-client/commit/113e0efcdad386786e30494b8a2ebdd5c72395d2))
+
 ## [0.0.9](https://github.com/zmkfirmware/zmk-studio-ts-client/compare/v0.0.8...v0.0.9) (2024-07-10)
 
 
