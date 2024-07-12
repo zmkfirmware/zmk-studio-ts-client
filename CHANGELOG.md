@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.11](https://github.com/zmkfirmware/zmk-studio-ts-client/compare/v0.0.10...v0.0.11) (2024-07-12)
+
+
+### Miscellaneous Chores
+
+* Prepare 0.0.11 release ([46cc9ad](https://github.com/zmkfirmware/zmk-studio-ts-client/commit/46cc9ad89bc28842b6eb198b40ed368d8f5b8c3c))
+
 ## [0.0.10](https://github.com/zmkfirmware/zmk-studio-ts-client/compare/v0.0.9...v0.0.10) (2024-07-12)
 
 
