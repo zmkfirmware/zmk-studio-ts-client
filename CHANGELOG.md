@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.0.12](https://github.com/zmkfirmware/zmk-studio-ts-client/compare/v0.0.11...v0.0.12) (2024-07-13)
+
+
+### Bug Fixes
+
+* Improved windows support. ([016e913](https://github.com/zmkfirmware/zmk-studio-ts-client/commit/016e91354fc07b1a846118534d4f024092d4e62a))
+
+
+### Miscellaneous Chores
+
+* Preper 0.0.12 release ([259bc56](https://github.com/zmkfirmware/zmk-studio-ts-client/commit/259bc56885ed0db622f5dfcb60d74ba51b977b16))
+
 ## [0.0.11](https://github.com/zmkfirmware/zmk-studio-ts-client/compare/v0.0.10...v0.0.11) (2024-07-12)
 
 
