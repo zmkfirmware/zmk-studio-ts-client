@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.13](https://github.com/zmkfirmware/zmk-studio-ts-client/compare/v0.0.12...v0.0.13) (2024-07-29)
+
+
+### Code Refactoring
+
+* Pull in msg updates with zmk.studio pkg. ([7854d26](https://github.com/zmkfirmware/zmk-studio-ts-client/commit/7854d263b48e8b2ac6f1ee914478bc86417e6a77))
+
 ## [0.0.12](https://github.com/zmkfirmware/zmk-studio-ts-client/compare/v0.0.11...v0.0.12) (2024-07-13)
 
 
