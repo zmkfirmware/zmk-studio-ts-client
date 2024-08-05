@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.14](https://github.com/zmkfirmware/zmk-studio-ts-client/compare/v0.0.13...v0.0.14) (2024-08-05)
+
+
+### Code Refactoring
+
+* Pull in core locking msg updates. ([94df97e](https://github.com/zmkfirmware/zmk-studio-ts-client/commit/94df97e238b6c3618ad143369b292bcc0bd45632))
+
 ## [0.0.13](https://github.com/zmkfirmware/zmk-studio-ts-client/compare/v0.0.12...v0.0.13) (2024-07-29)
 
 
