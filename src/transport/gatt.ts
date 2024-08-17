@@ -28,6 +28,7 @@ export async function connect(): Promise<RpcTransport> {
       // Reconnect to the same device will lose notifications if we don't first force a stop before starting again.
       await char.stopNotifications();
       await char.startNotifications();
+
       let vc = (ev: Event) => {
         let buf = (ev.target as BluetoothRemoteGATTCharacteristic)?.value
           ?.buffer;
@@ -47,14 +48,22 @@ export async function connect(): Promise<RpcTransport> {
       };
 
       dev.addEventListener('gattserverdisconnected', cb);
+
     },
   });
 
-  let writable = new WritableStream({
-    write(chunk) {
-      return char.writeValueWithoutResponse(chunk);
-    },
-  });
-
-  return { label, readable, writable };
+  return { label, readable,
+    writable: char.properties.writeWithoutResponse ?
+      new WritableStream({
+        write(chunk) {
+          return char.writeValueWithoutResponse(chunk);
+        },
+      })
+      :
+      new WritableStream({
+        write(chunk) {
+          return char.writeValueWithResponse(chunk);
+        },
+      })
+  };
 }
