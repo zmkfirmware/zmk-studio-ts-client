@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.0.17](https://github.com/zmkfirmware/zmk-studio-ts-client/compare/v0.0.16...v0.0.17) (2024-10-02)
+
+
+### Features
+
+* Add CI typecheck/test runs. ([217536a](https://github.com/zmkfirmware/zmk-studio-ts-client/commit/217536ac25c727a7a057afe53484c069da92628b))
+* Improved error handling. ([66f5abc](https://github.com/zmkfirmware/zmk-studio-ts-client/commit/66f5abc033d9421852fb178534d294e8449563a8))
+
 ## [0.0.16](https://github.com/zmkfirmware/zmk-studio-ts-client/compare/v0.0.15...v0.0.16) (2024-08-27)
 
 
