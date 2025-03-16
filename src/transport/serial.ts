@@ -1,8 +1,8 @@
 import type { RpcTransport } from './';
 
-export async function connect(): Promise<RpcTransport> {
+export async function connect(options?: SerialPortRequestOptions): Promise<RpcTransport> {
   let abortController = new AbortController();
-  let port = await navigator.serial.requestPort({});
+  let port = await navigator.serial.requestPort(options);
 
   await port.open({ baudRate: 12500 })
         .catch((e) => {
